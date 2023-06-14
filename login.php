@@ -13,7 +13,11 @@
         
         if($user){
            if( password_verify($_POST["password"], $user["password_hash"])){
-             die("Login successful");
+             session_start();
+             session_regenerate_id();
+             $_SESSION["user_id"] = $user["id"];
+             header("Location: index.php");
+             exit;
            }
         }
         $is_invalid = true;
@@ -34,11 +38,11 @@
     <?php if($is_invalid): ?>
         <em>Invalid Login</em>
     <?php endif; ?>
-    
+
     <div class="glass">
         <form method="post">
           <div class="field glass">
-            <input type="email" id="email" name="email" placeholder="email"/>
+            <input type="email" id="email" name="email" placeholder="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>"/>
           </div>
           <div class="field glass">
             <input type="password" id="password" name="password" placeholder="password"/>
