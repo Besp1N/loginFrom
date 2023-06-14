@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #9197ca;
+}
+form{
+    padding: 15px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.field{
+    margin-bottom: 15px;
+}
+.field input{
+    border: none;
+    padding: 5px;
+    border-radius: 13px;
+    color: black;
+}
+h1{
+    margin-bottom: 5px;
+}
+.glass{
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+button{
+    width: 70px;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 13px;
+    height: 20px;
+}
